@@ -1,0 +1,45 @@
+# Core dependencies for Phases 1-3 (data, EDA, preprocessing, baseline).
+# Versions pinned to what was installed and tested on Python 3.11.9.
+# Training stack: requirements-train.txt. API/inference stack: requirements-api.txt (later).
+
+# Data & EDA
+pandas==3.0.6
+numpy==2.4.6
+datasets==5.0.1
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# Baseline models & experiment tracking
+scikit-learn==1.9.1
+joblib==1.6.0
+mlflow==3.16.1
+
+# Data acquisition (Phase 1)
+kaggle==2.2.4
+huggingface_hub==1.33.0
+pyarrow==25.0.1
+requests==2.34.2
+tqdm==4.70.1
+
+# Preprocessing (Phase 2) and EDA notebooks
+scipy==1.17.1
+ipykernel==7.3.0
+nbclient==0.11.0
+nbformat==5.11.1
+
+# Inference (Phase 4): quantized ONNX predictor, no torch needed
+onnxruntime==1.30.0
+tokenizers==0.23.2
+
+# URL analyzer (Phase 5)
+tldextract==5.3.2
+requests-file==3.0.1
+rapidfuzz==3.14.6
+
+# Config
+python-dotenv==1.2.3
+
+# Testing
+onnx==1.23.0            # builds a tiny graph for the predictor integration test
+pytest==9.1.1
+pytest-cov==7.1.0

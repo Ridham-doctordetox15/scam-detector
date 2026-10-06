@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch screen (Android 7-11): the app's background colour (light or dark, from values-night)
+     with the logo centred. Same colour as the first Flutter frame, so there is no white flash. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_background" />
+    <item
+        android:drawable="@drawable/splash_logo"
+        android:gravity="center"
+        android:width="96dp"
+        android:height="96dp" />
+</layer-list>

@@ -1,0 +1,3 @@
+# The hook is a shell script: it must keep LF line endings even on Windows checkouts.
+githooks/pre-commit text eol=lf
+githooks/*.py text eol=lf

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Monochrome launcher layer for themed icons (same shapes as the foreground): a message bubble with a shield-shaped
+     window and a tick - "this message, checked". The shield is a hole, so the indigo background
+     shows through it. Kept inside the 66 dp safe zone so any launcher mask shape works. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Scaled 1.12x about the centre; the tail tip stays inside the 33 dp safe radius. -->
+    <group android:pivotX="54" android:pivotY="54" android:scaleX="1.12" android:scaleY="1.12">
+        <path
+            android:fillColor="#FFFFFF"
+            android:fillType="evenOdd"
+            android:pathData="M40,32 H68 A10,10 0 0 1 78,42 V60 A10,10 0 0 1 68,70 H50 L39,79 V70 A9,9 0 0 1 30,61 V42 A10,10 0 0 1 40,32 Z M54,38.5 L64.5,42.5 V50.5 C64.5,57 60,61.6 54,63.5 C48,61.6 43.5,57 43.5,50.5 V42.5 Z" />
+        <path
+            android:pathData="M49,50.8 L52.6,54.4 L59.2,47.6"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+    </group>
+</vector>

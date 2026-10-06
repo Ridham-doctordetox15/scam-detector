@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "fake_kyc_update",
+      "name": "Fake KYC Update / Account Block Threat",
+      "category": "scam",
+      "how_it_works": "A message impersonating a bank, wallet, or mobile operator claims the recipient's KYC (Know Your Customer) details have expired or are incomplete, and that the account, SIM, or wallet will be blocked or deactivated within hours unless it is 're-verified' immediately. The message pushes the recipient to click a link to a look-alike site, call a number, or reply with personal/bank details, and the urgency is designed to prevent the recipient from checking with the real institution first.",
+      "typical_phrases": [
+        "your kyc is not updated, account will be suspended today",
+        "update your kyc within 2 hours to avoid deactivation",
+        "your sim card kyc pending, click link to update now",
+        "dear customer your account will be blocked, complete kyc verification"
+      ],
+      "red_flags": [
+        "Threat of an account/SIM/wallet being blocked within a very short deadline",
+        "Link goes to a domain that only resembles the real bank/operator, not its actual website",
+        "Asks for KYC documents, PAN, Aadhaar, or OTP over SMS/WhatsApp instead of the bank's app or branch",
+        "Message arrives from an unknown number, not the bank's official short code"
+      ],
+      "what_to_do": "Do not click the link or share any document, PIN, or OTP. Open the bank or operator's official app or website directly (never through the message's link) to check your real KYC status, or call the number printed on your card/bill.",
+      "languages": ["en", "hinglish", "hi"],
+      "source_notes": "Original text written for this project, based on general public awareness of KYC-update phishing scams reported by RBI and telecom operators in India; no text copied from any specific message, article, or dataset in this repo."
+    },
+    {
+      "id": "electricity_bill_disconnection",
+      "name": "Fake Electricity Bill Disconnection Threat",
+      "category": "scam",
+      "how_it_works": "The message poses as the local electricity board and warns that the recipient's power connection will be disconnected tonight because of an unpaid or 'not updated' bill. It asks the recipient to call a given mobile number or install a remote-access app (often disguised as an 'update' app) to speak to a 'customer care executive' who will supposedly help pay the bill electronically, and that app or call is used to steal payment credentials.",
+      "typical_phrases": [
+        "your electricity will be disconnected tonight, previous bill not updated",
+        "power cut scheduled due to unpaid bill, contact executive immediately",
+        "download this app to pay your electricity bill and avoid disconnection",
+        "dear consumer your connection will be cut at 9:30pm today"
+      ],
+      "red_flags": [
+        "Disconnection threatened within a few hours, with no prior official notice",
+        "Asks to call a personal mobile number instead of the board's listed helpline",
+        "Pushes installation of a screen-sharing or 'quick support' app",
+        "Bill amount or consumer number is vague or not mentioned at all"
+      ],
+      "what_to_do": "Never install a remote-access app because of an SMS. Check your bill status only on your electricity board's official website/app or its published helpline number, and pay only through that channel.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on widely reported 'fake power bill disconnection' scams covered by Indian police cybercrime advisories; no text copied from any specific message or article."
+    },
+    {
+      "id": "courier_customs_fee",
+      "name": "Fake Courier / Customs Fee Demand",
+      "category": "scam",
+      "how_it_works": "A message claims a parcel addressed to the recipient (often from abroad, or from a well-known courier) is held at customs or a courier facility because a small customs duty, handling fee, or 'clearance charge' is unpaid. It asks the recipient to pay a small amount through a link or UPI ID to release the parcel; the payment page is designed to also capture card/UPI credentials for larger theft, or the parcel does not exist at all.",
+      "typical_phrases": [
+        "your parcel is held at customs, pay rs 350 clearance fee to release",
+        "courier could not deliver, pending customs duty payment required",
+        "pay a small handling charge to receive your international package",
+        "action required: your shipment is on hold at the airport, settle dues now"
+      ],
+      "red_flags": [
+        "Recipient was not expecting any parcel, or does not recognise the courier",
+        "Very small 'fee' relative to a supposedly valuable/international parcel",
+        "Payment link/UPI is not the courier company's known official channel",
+        "No tracking number, or a tracking number that cannot be verified on the courier's real website"
+      ],
+      "what_to_do": "Do not pay through the link. Check the shipment status only on the courier's official app/website with a tracking number you recognise, and contact the courier through their listed customer-care channel, not the number in the message.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on general public awareness of courier/customs-fee phishing scams reported by Indian consumer and cybercrime advisories; no text copied from any specific message or article."
+    },
+    {
+      "id": "parcel_address_mismatch",
+      "name": "Fake 'Parcel Address Mismatch' Verification",
+      "category": "scam",
+      "how_it_works": "A message claims a delivery attempt failed because the recipient's address is incomplete or doesn't match records, and asks them to click a link to 're-confirm' or 'update' their address and sometimes payment details before the parcel is returned to sender. The link leads to a fake delivery-tracking page that harvests personal and card details rather than actually rescheduling any delivery.",
+      "typical_phrases": [
+        "we could not deliver your parcel, address mismatch, confirm details here",
+        "your package is on hold, update your delivery address within 24 hours",
+        "delivery failed due to incomplete address, click to reschedule",
+        "your order will be returned unless you verify your shipping address now"
+      ],
+      "red_flags": [
+        "Recipient is not currently expecting any delivery",
+        "Link uses a domain that is not the courier or e-commerce site's real domain",
+        "Asks for card or bank details to 'confirm' an address, which real couriers never require",
+        "Generic greeting with no real order number or tracking ID"
+      ],
+      "what_to_do": "Ignore the link. Check any pending orders directly in the shopping app or the courier's official tracking page using a tracking number you already have.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on general public reporting on fake delivery/address-verification phishing; no text copied from any specific message or article."
+    },
+    {
+      "id": "lottery_prize_scam",
+      "name": "Fake Lottery / KBC-style Prize Win",
+      "category": "scam",
+      "how_it_works": "The recipient is told they have won a large cash prize, lottery, or a TV-show-style jackpot (sometimes name-dropping a real quiz show) that they never entered. To claim it, they are asked to pay a 'processing fee', 'tax', or 'release charge' in advance, or to share bank details for the prize to be 'transferred'. No prize ever arrives; the up-front payment is the actual goal.",
+      "typical_phrases": [
+        "congratulations you have won 25 lakh in the lucky draw, pay processing fee to claim",
+        "your number has been selected for the kbc lucky winner prize, contact our manager",
+        "you are a winner of our anniversary lottery, share your bank details to receive the amount",
+        "claim your prize of rs 10,00,000 by paying a small registration fee today"
+      ],
+      "red_flags": [
+        "You never entered any such lottery, draw, or contest",
+        "Any request to pay money before receiving a prize",
+        "Urgency to respond within hours or the prize is 'forfeited'",
+        "Contact only through WhatsApp/personal mobile number, not an official company channel"
+      ],
+      "what_to_do": "Do not pay anything or share bank details. Legitimate prizes never require an upfront fee to be released; ignore or block the sender and report it if it references a real brand or show.",
+      "languages": ["en", "hinglish", "hi"],
+      "source_notes": "Original text written for this project, based on general public awareness of lottery and 'KBC lucky winner' scams widely reported in India; no text copied from any specific message or article."
+    },
+    {
+      "id": "part_time_job_task_scam",
+      "name": "Part-Time 'Like & Earn' Task Job Scam",
+      "category": "scam",
+      "how_it_works": "A message or Telegram/WhatsApp invite offers easy part-time income for simple tasks like liking YouTube videos, rating apps, or joining a channel, paying a small real amount for the first task or two to build trust. Once the recipient is engaged, they are moved into a 'task group' where larger 'investment' deposits are required to unlock bigger payouts, and withdrawals are blocked until yet more deposits are made - the deposited money is never returned.",
+      "typical_phrases": [
+        "earn 500 rupees daily by liking youtube videos, part time work from home",
+        "join our telegram channel for simple online tasks and daily payment",
+        "no investment required initially, just complete tasks and get paid instantly",
+        "recharge your task wallet to unlock the next higher paying task"
+      ],
+      "red_flags": [
+        "Recruitment happens on WhatsApp/Telegram, not a real company's HR channel",
+        "Small genuine-looking payouts at first, followed by requests to deposit money",
+        "Withdrawals are blocked until you 'top up' your task wallet again",
+        "No formal offer letter, interview, or verifiable company details"
+      ],
+      "what_to_do": "Never deposit money to 'unlock' earnings from a task-based job. Stop responding once you're asked to pay anything, and do not share bank/UPI credentials with the group.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on general public awareness of task-based/part-time job scams on Telegram and WhatsApp widely reported in Indian media; no text copied from any specific message or article."
+    },
+    {
+      "id": "loan_offer_scam",
+      "name": "Fake Instant Loan Offer / Processing Fee Scam",
+      "category": "scam",
+      "how_it_works": "The message offers an instant, pre-approved personal loan at an unusually low interest rate with minimal documentation, targeting people who may be in financial need. After the recipient shows interest, they are asked to pay a 'processing fee', 'GST', or 'insurance charge' upfront via UPI to release the loan amount; the loan is never disbursed, and sometimes the app itself is used to harvest contacts and photos for later harassment.",
+      "typical_phrases": [
+        "you are pre-approved for a rs 2 lakh instant loan, no documents required",
+        "get a personal loan in 10 minutes, just pay a small processing fee first",
+        "your loan is approved, transfer the gst amount to receive the disbursed amount",
+        "install our loan app to get instant cash, apply now with just your phone number"
+      ],
+      "red_flags": [
+        "Loan approval before any real credit check or documentation",
+        "Any fee, deposit, or 'insurance' required before the loan amount is disbursed",
+        "Pressure to install an unfamiliar lending app with broad phone permissions",
+        "No RBI registration or NBFC name that can be verified"
+      ],
+      "what_to_do": "Never pay a fee to receive a loan; legitimate lenders deduct fees from the disbursed amount, not before it. Verify any lending app or NBFC on the RBI's list of registered entities before installing anything.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on RBI public advisories about unauthorised digital lending apps and loan-processing-fee scams; no text copied from any specific message or article."
+    },
+    {
+      "id": "fake_bank_otp_request",
+      "name": "Fake Bank Call/SMS Asking to Share OTP",
+      "category": "scam",
+      "how_it_works": "Someone impersonating a bank employee calls the recipient (or sends an SMS) about a supposed problem - a blocked card, a failed transaction, a reward point expiry - and asks the recipient to read out or forward the OTP they are about to receive, or to enter it on a page/app the caller directs them to. The OTP is then used to authorise a real transaction on the victim's account, draining funds while the victim believes they are just 'verifying' something.",
+      "typical_phrases": [
+        "this is your bank calling, please share the otp to verify your card",
+        "for security purpose kindly tell me the 6 digit code you just received",
+        "to reverse this wrong transaction please forward the otp sms to us",
+        "your reward points will expire, share the otp to redeem them now"
+      ],
+      "red_flags": [
+        "Any request, by call or SMS, to share, read out, or forward an OTP",
+        "Caller creates urgency around a problem you did not report yourself",
+        "Caller already knows some of your details, making the call sound legitimate",
+        "Bank/UPI apps and staff never need your OTP - the OTP is only for you"
+      ],
+      "what_to_do": "Never share an OTP with anyone, no matter who they claim to be. Hang up and call your bank back using the number on your card or their official app/website if you're unsure.",
+      "languages": ["en", "hinglish", "hi"],
+      "source_notes": "Original text written for this project, based on RBI and bank public awareness campaigns that repeatedly warn 'do not share your OTP with anyone'; no text copied from any specific message or article."
+    },
+    {
+      "id": "upi_collect_request_fraud",
+      "name": "Fake UPI 'Collect Request' / Refund Scam",
+      "category": "scam",
+      "how_it_works": "The scammer, often posing as a buyer on an online marketplace or a helpful 'customer care' agent processing a refund, sends the victim a UPI collect (payment request) notification and tells them to just 'enter your UPI PIN to receive the money'. In UPI, entering the PIN on a collect request actually authorises a payment OUT of the victim's account, not in - so the victim ends up sending money while believing they are receiving it.",
+      "typical_phrases": [
+        "i've sent you the payment request, just enter your upi pin to accept and receive the amount",
+        "to get your refund approved, accept the request and enter your pin",
+        "sir i am interested in your item, accept my payment request to get the money",
+        "customer care here, enter upi pin on the collect request to process your refund"
+      ],
+      "red_flags": [
+        "Being told to enter a UPI PIN in order to 'receive' money",
+        "A refund or payment being processed through a 'collect request' rather than the sender simply paying you",
+        "Pressure from an unknown buyer/agent to act quickly on a payment request",
+        "The counterpart avoids voice calls or video verification"
+      ],
+      "what_to_do": "Never enter your UPI PIN to receive money - a PIN is only ever needed to send/pay. Decline unexpected collect requests and verify refunds directly in the app or with the seller through the platform's official channel.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on public awareness campaigns by NPCI/banks explaining that a UPI PIN is only needed to pay, never to receive; no text copied from any specific message or article."
+    },
+    {
+      "id": "sextortion_video_call_threat",
+      "name": "Sextortion via Video Call Screenshot Threat",
+      "category": "scam",
+      "how_it_works": "A stranger (often posing as an attractive woman) initiates a video call, sometimes on WhatsApp, that turns out to show explicit content; the attacker secretly screen-records the victim's own video feed too, sometimes after tricking them into undressing. Immediately after, the attacker sends a screenshot and threatens to share it with the victim's contacts, family, or on social media unless money is paid quickly, often repeatedly.",
+      "typical_phrases": [
+        "i have recorded your video call, pay now or i will send it to all your contacts",
+        "your family will see this video if you don't pay within 30 minutes",
+        "send the payment immediately or this gets uploaded to social media",
+        "i have your number's contact list, one payment and i delete everything"
+      ],
+      "red_flags": [
+        "Unknown caller escalating quickly to video/explicit content",
+        "Screenshot or recording is presented immediately after the call as leverage",
+        "Extremely short deadline paired with a threat to contact family/friends",
+        "Repeated demands for more money even after paying once"
+      ],
+      "what_to_do": "Stop all contact and do not pay - payment rarely stops further demands. Block the number, do not delete the evidence, and report to the Indian Cyber Crime portal (cybercrime.gov.in) or the 1930 helpline.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on public awareness advisories from Indian police cybercrime cells about video-call sextortion; no text copied from any specific message or article."
+    },
+    {
+      "id": "digital_arrest_scam",
+      "name": "'Digital Arrest' Fake Law-Enforcement Video Call",
+      "category": "scam",
+      "how_it_works": "A caller claiming to be from the police, CBI, customs, or a courier-linked cybercrime cell tells the victim that a parcel/SIM/bank account in their name is linked to a crime (drugs, money laundering) and that they are under 'digital arrest' - required to stay on a video call, sometimes in front of a fake uniformed 'officer' on screen, and not tell anyone, while being pressured to transfer money to a 'safe government account' to prove innocence or avoid real arrest.",
+      "typical_phrases": [
+        "you are under digital arrest, do not disconnect this call or leave your house",
+        "your aadhaar is linked to an illegal parcel, cbi is investigating your case",
+        "transfer funds to this rbi verification account to clear your name",
+        "this call is being monitored by law, do not tell any family member"
+      ],
+      "red_flags": [
+        "No real law-enforcement process is conducted entirely over a video call",
+        "Instruction to stay on the call continuously and not contact anyone else",
+        "Any request to transfer money to 'verify' innocence or avoid arrest",
+        "Fake uniforms, background, or official-looking documents shown on screen"
+      ],
+      "what_to_do": "Hang up - there is no such thing as a 'digital arrest'. Verify independently by visiting a local police station or calling the cybercrime helpline 1930; never transfer money during or after such a call.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on 2024-2025 Indian government and police public awareness campaigns explicitly stating there is no provision for 'digital arrest'; no text copied from any specific message or article."
+    },
+    {
+      "id": "investment_stock_tips_scam",
+      "name": "Fake Investment / Stock-Tips Group Scam",
+      "category": "scam",
+      "how_it_works": "Victims are added to a WhatsApp or Telegram 'investment community' run by someone posing as a SEBI-registered advisor or successful trader, who shares a few genuinely correct tips to build credibility, then pushes the group toward a trading app or portal where deposited funds show fabricated, fast-growing 'profits' on screen. When the victim tries to withdraw, the platform demands more fees/taxes, or simply stops responding, and the deposited money and shown profits are both fictitious.",
+      "typical_phrases": [
+        "join our exclusive stock trading group, guaranteed daily returns",
+        "our sebi registered expert gives 100% accurate intraday calls",
+        "your portfolio has grown to 5 lakhs, pay a small tax to withdraw your profit",
+        "limited seats available, deposit now to start earning from tomorrow"
+      ],
+      "red_flags": [
+        "Guaranteed or 'sure-shot' returns - no legitimate investment can promise this",
+        "Trading happens through an unfamiliar app/website, not a SEBI-registered broker",
+        "Any fee, tax, or 'unlock charge' demanded before a withdrawal is allowed",
+        "Screenshots of huge, fast profits used to pressure larger deposits"
+      ],
+      "what_to_do": "Only invest through SEBI-registered brokers and platforms you can verify independently. Treat any group promising guaranteed returns as a scam, and never pay extra fees to 'unlock' a withdrawal.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on SEBI public investor-awareness advisories about fraudulent trading tips and fake portfolio apps; no text copied from any specific message or article."
+    },
+    {
+      "id": "fake_customer_care_number",
+      "name": "Fake Customer Care Number (Search-Engine / Social Media)",
+      "category": "scam",
+      "how_it_works": "The victim, trying to resolve a genuine issue (a bank complaint, a food-delivery refund, a wallet problem), searches online or calls a number found on social media claiming to be a brand's customer care. The number is actually run by a scammer who, under the guise of 'resolving' the issue, asks the victim to share OTPs, install a remote-access app, or make a small 'refund verification' payment - and uses that access to steal money instead of helping.",
+      "typical_phrases": [
+        "thank you for calling customer care, please share the otp to verify your complaint",
+        "to process your refund, kindly download this remote support app",
+        "for verification purpose send rs 1 to this upi id, it will be refunded with your amount",
+        "your complaint is registered, our executive will guide you to fix it, please stay on call and follow the steps"
+      ],
+      "red_flags": [
+        "Number was found through a general web/social-media search, not the brand's official app or website",
+        "Being asked to install a remote-access/screen-share app to 'help' with a complaint",
+        "Any request to pay even a small amount to 'verify' or 'unlock' a refund",
+        "Executive asks for OTP or full card details to 'process' a complaint"
+      ],
+      "what_to_do": "Only use customer-care numbers listed inside the official app or on the brand's verified website. Never install remote-access apps or share OTPs with anyone claiming to help you over the phone.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, based on widely reported 'fake customer care number' scams covered by Indian consumer-protection and cybercrime advisories; no text copied from any specific message or article."
+    },
+    {
+      "id": "premium_rate_prize_lure",
+      "name": "Premium-Rate Prize Call-Back Lure",
+      "category": "scam",
+      "how_it_works": "A message claims the recipient has won a cash prize, holiday, or gadget from a supposed draw or a well-known brand's promotion they never entered, and asks them to call a number to 'claim' it. The number is a premium-rate line that charges a high per-minute cost, and the call is deliberately kept going (holding music, transfers, T&Cs) so the victim runs up a large phone bill; sometimes the 'claim' also asks for a small delivery/tax payment on top.",
+      "typical_phrases": [
+        "you have won a guaranteed cash prize, call this number now to claim",
+        "your mobile number has been selected for a free holiday, ring to collect",
+        "urgent! this is our final attempt to contact you about your prize, call now",
+        "congratulations, claim your award by calling our claims line before it expires"
+      ],
+      "red_flags": [
+        "You never entered the competition or draw referenced",
+        "The claim number is a normal-looking mobile/landline number with no brand association",
+        "Message pressures an urgent callback ('final attempt', 'expires today')",
+        "Prize is vague ('a prize', 'cash or holiday') rather than something specific and verifiable"
+      ],
+      "what_to_do": "Do not call the number. If a promotion is genuine, you can verify it independently through the brand's official customer-care channel without using the number given in the message.",
+      "languages": ["en"],
+      "source_notes": "Original text written for this project, based on general public awareness of classic premium-rate-line 'prize claim' SMS scams (widely documented internationally, e.g. UK Ofcom/consumer advisories); no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_bank_otp_alert",
+      "name": "Genuine Bank/App OTP Delivery Alert",
+      "category": "legitimate",
+      "how_it_works": "A bank, wallet, or app sends a one-time password for a transaction or login the recipient themselves just initiated, along with a short reminder never to share it with anyone. The message is purely informational: it delivers a code and a warning, and never asks the recipient to click a link, call a number, or forward/read out the code to anyone.",
+      "typical_phrases": [
+        "your otp for the transaction is 483920, valid for 10 minutes, do not share with anyone",
+        "use 719045 to complete your login, this code is confidential",
+        "otp for your payment is 205817, bank staff will never ask for this",
+        "your one time password is 664210, please do not share it even with bank representatives"
+      ],
+      "red_flags": [
+        "Message is purely informational and does not ask you to do anything with the code",
+        "Explicitly warns not to share the OTP, including with bank staff",
+        "Arrives right after you yourself requested a login/transaction",
+        "Comes from the bank/app's known official sender ID, not a personal number"
+      ],
+      "what_to_do": "No action needed beyond using the OTP yourself for the transaction you started. If you did not request any transaction, treat an unexpected OTP as a warning sign and check your account/app directly.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of a genuine bank/app OTP message; no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_bill_reminder",
+      "name": "Genuine Utility/Telecom Bill Reminder",
+      "category": "legitimate",
+      "how_it_works": "A telecom operator, electricity board, or other utility sends a routine reminder that a bill is due or overdue, usually stating the amount and due date, and pointing to the provider's own app, website, or standard payment options - without threats of same-day disconnection or requests to install unfamiliar apps or share OTPs.",
+      "typical_phrases": [
+        "your electricity bill of rs 1240 for this month is due on the 15th, pay via our app or website",
+        "your postpaid bill of rs 599 is due, kindly pay before the due date to avoid late fee",
+        "dear customer your monthly bill has been generated, view and pay in myaccount app",
+        "reminder: your broadband bill is due in 3 days, pay online to avoid service interruption"
+      ],
+      "red_flags": [
+        "States a specific, plausible amount and due date rather than vague urgency",
+        "Points to the provider's own named app/website, not a personal number or unrelated link",
+        "No threat of disconnection within hours, and no request to install a remote-access app",
+        "Consistent with your existing service/account with that provider"
+      ],
+      "what_to_do": "Pay through the provider's official app, website, or usual payment method. If anything feels off (unfamiliar amount, unusually urgent tone), check your account directly instead of using any link in the message.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of a routine utility/telecom bill reminder; no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_delivery_update",
+      "name": "Genuine Courier/E-commerce Delivery Update",
+      "category": "legitimate",
+      "how_it_works": "A courier or e-commerce platform sends a routine update about a real order the recipient placed - out for delivery, delivered, or a delay notice - typically including an order or tracking number, and directing the recipient to the shopping app or courier's own tracking page for details, without demanding any payment to release the parcel.",
+      "typical_phrases": [
+        "your order #48213 is out for delivery today between 2pm-6pm",
+        "your package has been delivered, thank you for shopping with us",
+        "shipment update: your order is delayed by one day due to weather, new eta tomorrow",
+        "track your parcel anytime in the app using order id 48213"
+      ],
+      "red_flags": [
+        "References an order/tracking number you can recognise and independently check",
+        "Matches a purchase you actually made recently",
+        "No request for a customs, clearance, or 'address verification' payment",
+        "Link, if present, points to the courier's or platform's own known tracking domain"
+      ],
+      "what_to_do": "No payment or link-click is needed to receive a routine delivery. If in doubt, check the order status directly in the shopping app rather than through the message's link.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of a genuine delivery status update; no text copied from any specific message or article."
+    },
+    {
+      "id": "legitimate_brand_promotion",
+      "name": "Legitimate Commercial Promotion from a Named Brand",
+      "category": "legitimate",
+      "how_it_works": "An identifiable, real business (a telecom operator, retailer, bank, or app) sends a promotional message about a genuine sale, cashback, recharge offer, or subscription benefit. It may be pushy or unsolicited, but the offer, brand, and terms are real and verifiable, there's no deception about who is sending it or what is being offered, and it does not demand upfront payment of a 'fee' to release money or a prize.",
+      "typical_phrases": [
+        "flat 30% off this weekend only at our store, shop now",
+        "recharge with our 299 plan and get 10gb extra data free",
+        "get 5% cashback on your next purchase using our app",
+        "your favourite show's new season is now streaming, watch on our app"
+      ],
+      "red_flags": [
+        "Sent by a brand/operator you actually have an account or relationship with",
+        "Offer terms are specific and consistent with things that brand normally sells",
+        "No claim of a 'prize' you did nothing to earn, and no upfront fee to receive anything",
+        "Link, if present, goes to the brand's own known app/website domain"
+      ],
+      "what_to_do": "Treat as ordinary marketing - engage with the offer only through the brand's official app/website if interested, and reply STOP/unsubscribe if unwanted; no urgent action or verification is required.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of a real brand's promotional message, consistent with the 'promo' category defined in docs/label_rubric.md; no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_password_reset_alert",
+      "name": "Genuine Password/PIN Reset Notification",
+      "category": "legitimate",
+      "how_it_works": "A service sends a short notice confirming that a password, PIN, or security setting was just changed - either as a code to complete a reset the user is actively doing, or as an after-the-fact confirmation - along with guidance to contact support if the user did not make this change themselves. It does not ask the recipient to click a link to 'undo' the change or to share any credentials.",
+      "typical_phrases": [
+        "your password was successfully changed just now, if this wasn't you contact support",
+        "use code 552019 to reset your account password, valid for 15 minutes",
+        "your account pin has been updated, if you did not request this please reach out to us",
+        "security alert: your login password was changed from a new device"
+      ],
+      "red_flags": [
+        "Confirms an action rather than demanding one, or gives a code only for a reset you started",
+        "Points to official support channels rather than an embedded 'reverse this' link",
+        "Matches something you actually just did (changing your password)",
+        "No request to share the new password or any OTP with the sender"
+      ],
+      "what_to_do": "If you made the change, no action is needed. If you did not, contact the service through its official app/website immediately to secure your account - never through a link in the alert itself.",
+      "languages": ["en"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of a password/PIN change notification; no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_appointment_reminder",
+      "name": "Genuine Appointment/Interview Reminder",
+      "category": "legitimate",
+      "how_it_works": "A clinic, office, or recruiter sends a plain reminder about a scheduled appointment or interview the recipient already arranged, stating the date, time, and location or a call link, without financial requests or urgent threats.",
+      "typical_phrases": [
+        "this is a reminder for your appointment tomorrow at 10am at our clinic",
+        "your interview is scheduled for friday 3pm, please join the link 5 minutes early",
+        "reminder: your consultation with dr sharma is confirmed for today evening",
+        "your meeting with the hr team is rescheduled to monday 11am, please confirm availability"
+      ],
+      "red_flags": [
+        "Matches an appointment/interview the recipient actually arranged",
+        "No request for payment, OTP, or personal financial details",
+        "Comes from, or references, a specific known person/organisation",
+        "Tone is informational, not urgent or threatening"
+      ],
+      "what_to_do": "Simply attend as scheduled, or contact the sender through a known number/email if you need to reschedule; no security action is required.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing an ordinary, harmless appointment/interview reminder message; no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_subscription_renewal_notice",
+      "name": "Genuine Subscription Renewal / Recharge Notice",
+      "category": "legitimate",
+      "how_it_works": "A streaming, mobile, or app subscription service informs the recipient that their existing paid subscription or recharge is due for renewal soon, at the price they already agreed to, with the option to manage or cancel it in the app - not a fresh 'offer' asking for new payment details by link.",
+      "typical_phrases": [
+        "your monthly subscription renews on the 5th for rs 199, manage anytime in the app",
+        "your data pack expires tomorrow, recharge from the app to continue uninterrupted service",
+        "your premium membership auto-renews in 3 days at the current rate",
+        "reminder: your yearly plan will renew soon, no action needed unless you wish to cancel"
+      ],
+      "red_flags": [
+        "References a subscription/plan you actually have",
+        "Amount matches the price you already agreed to, not a surprise charge",
+        "Managed entirely within the official app, not through an external payment link",
+        "No threat of immediate service loss within hours"
+      ],
+      "what_to_do": "No action is required unless you want to change or cancel the plan - do that directly inside the official app, not via any link in the message.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of a subscription/recharge renewal reminder; no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_bank_statement_notification",
+      "name": "Genuine Bank Statement / Transaction Alert",
+      "category": "legitimate",
+      "how_it_works": "A bank sends a routine debit/credit alert or e-statement notification for a transaction the account holder actually made, stating the amount, a masked account/card number, and available balance, purely for the customer's own record - with no request to click a link or share any credential.",
+      "typical_phrases": [
+        "rs 1500 debited from your account ending 4821 on 03-oct, available balance rs 23,400",
+        "your salary of rs 45000 has been credited to your account ending 1122",
+        "your monthly e-statement is now available, view it in netbanking or the app",
+        "a payment of rs 799 was made using your card ending 5567 at a merchant"
+      ],
+      "red_flags": [
+        "Matches a transaction the recipient actually recognises making",
+        "No link asking to 'verify' or 'reverse' the transaction",
+        "Only a masked account/card number is shown, never the full number",
+        "Purely informational tone with no request for action"
+      ],
+      "what_to_do": "No action needed if the transaction is recognised. If it is not, contact the bank directly through its official app or the number on the back of your card - never through a link in the alert.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of a bank debit/credit alert; no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_ecommerce_order_confirmation",
+      "name": "Genuine E-commerce Order Confirmation",
+      "category": "legitimate",
+      "how_it_works": "An online shopping platform confirms that an order the recipient placed has been received, billed, or invoiced, including an order number and amount that matches what the recipient actually paid, with an option to view the invoice or track the order in the app - no request to 'update' payment details or click an unfamiliar link to release the order.",
+      "typical_phrases": [
+        "your order for rs 899 has been placed successfully, order id 77341",
+        "thank you for shopping with us, view your e-invoice in the app",
+        "your order has been packed and will be shipped within 24 hours",
+        "payment of rs 1299 received for order #90231, track it anytime in the app"
+      ],
+      "red_flags": [
+        "Matches a purchase the recipient actually made, with a recognisable amount",
+        "Order/invoice details are viewable directly inside the shopping app",
+        "No request for additional payment or card details to 'confirm' the order",
+        "Tone is a simple confirmation, not urgent or threatening"
+      ],
+      "what_to_do": "No action needed - you can view the order/invoice directly in the app at any time. Treat any message asking for extra payment on an already-placed order with suspicion.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of an e-commerce order/invoice confirmation; no text copied from any specific message or article."
+    },
+    {
+      "id": "legitimate_government_scheme_update",
+      "name": "Genuine Government Scheme / Service Update",
+      "category": "legitimate",
+      "how_it_works": "A government department or scheme (e.g. a subsidy, ration, vaccination, or civic-services update) sends an informational message about eligibility, status, or a scheduled camp/appointment, directing the recipient to the department's official portal or office for any action, rather than asking for payment or personal documents to be sent back over SMS/WhatsApp.",
+      "typical_phrases": [
+        "your subsidy application status has been updated, check on the official portal",
+        "vaccination slots now available near you, book on the official app",
+        "your ration card details are due for renewal, visit your nearest centre with documents",
+        "your application reference number 88214 has been received and is under process"
+      ],
+      "red_flags": [
+        "Directs you to the government department's own portal/office rather than a private link",
+        "No request to pay a 'fee' to receive a benefit you're entitled to",
+        "No request to send documents or OTPs back over SMS/WhatsApp",
+        "Matches a scheme or application you actually engaged with"
+      ],
+      "what_to_do": "Handle any action through the official government portal or in person at the relevant office; never pay a 'fee' or share documents through a link in the message.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of a government scheme/service update message; no text copied from any specific message or article."
+    },
+    {
+      "id": "genuine_interview_job_offer",
+      "name": "Genuine Recruiter Outreach / Job Offer",
+      "category": "legitimate",
+      "how_it_works": "A recruiter or HR contact from an identifiable company reaches out about a real job opening or interview, referencing the role, company name, and next steps (interview, documents to bring), without demanding any payment, security deposit, or 'registration fee' from the candidate at any stage.",
+      "typical_phrases": [
+        "we reviewed your profile for the software engineer role at our company, are you available for an interview this week",
+        "congratulations, we would like to move forward with your application, please share your availability",
+        "your interview for the marketing associate position is confirmed for tuesday",
+        "please bring your original documents for verification at the time of joining"
+      ],
+      "red_flags": [
+        "Names a specific, identifiable company and role",
+        "No request for money, security deposit, or 'training fee' at any stage",
+        "Contact matches a job application the recipient actually made",
+        "Process follows normal steps: interview, offer, then joining - not payment first"
+      ],
+      "what_to_do": "Verify the company and role independently (official website, LinkedIn) before sharing documents, and never pay any fee to a recruiter for a job opportunity.",
+      "languages": ["en", "hinglish"],
+      "source_notes": "Original text written for this project, describing the standard, harmless form of genuine recruiter outreach, contrasted with the part-time task-job scam pattern above; no text copied from any specific message or article."
+    }
+  ]
+}

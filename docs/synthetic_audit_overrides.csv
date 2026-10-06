@@ -1,0 +1,62 @@
+row_id,action,reason
+dadd5329a893,remove,owner: real hdfcbank.com domain; 'verify bank details' link is ambiguous rather than scam (draft: flip)
+641541a7d8a1,remove,owner: real hdfcbank.com domain; 'unauthorised transaction' login link is ambiguous (draft: flip)
+4dfb7df47117,remove,threat only with no link or domain; same treatment as owner-reviewed removes for informal pay-or-cut messages (draft: flip)
+6110c56df8b5,remove,threat only with no link or domain; same treatment as owner-reviewed removes (draft: flip)
+0f4eeb265715,remove,payment link on a real bank domain with a bare OTP; ambiguous (draft: flip)
+1c039ab2eefa,remove,'click to pay' on a real bank domain; ambiguous (draft: flip)
+461875b47fa3,remove,login-alert reset link on a real SBI Card domain; genuine-looking pattern (draft: flip)
+71772b12a405,remove,KYC deadline on the real Kotak domain; ambiguous (draft: flip)
+a24065a9cfe1,remove,a job seeker's question is not a message a recipient would receive as a scam or a notice (draft: flip to safe)
+52f1843a9240,remove,malformed look-alike domain (tnebltd.gov.inula) on a safe row
+40a0f3a5f3fb,remove,non-official electricity-board domain (tneb.org.in) on a safe row
+f713f1318fa9,remove,HR onboarding checklist download hosted on a bank domain
+a9df07623d52,remove,bank credit-card offer link on the amazon.in shopping domain
+584a7e1d5d4f,remove,bank credit-card offer link on the amazon.in shopping domain
+b318a7d98b0d,remove,utility bill payment link on a bank domain without a matching sender
+15f421e2b6ec,remove,job offer-letter signature link on the amazon.in shopping domain
+190cf9a7b4c4,remove,HR onboarding upload link on the amazon.in shopping domain
+67638a11732d,remove,phone bill payment link on a bank domain without a matching sender
+134dbb8d1d60,flip,HR background-verification message asking to log in with an OTP on the UIDAI domain
+4faa64b2f2a6,remove,tells the user to use an OTP at the doorstep (acts on an OTP)
+c18325399bbf,remove,tells the user to keep an OTP ready
+927271449968,remove,tells the user to use an OTP to receive the package
+9fba2604feea,remove,tells the user to verify delivery with an OTP
+49ddad7ee116,remove,tells the user to use an OTP to collect
+2f00491022ad,remove,tells the user to use an OTP to complete a bill payment
+ba93136bce5d,remove,tells the user to give the OTP to the delivery person
+014df5ef7892,remove,KYC steps combined with a bare OTP
+ec6af89eed1a,remove,tells the user to use an OTP at the doorstep
+1a713347deff,remove,tells the user to use an OTP at the door
+39c28262797a,remove,tells the user to keep a verification code ready
+6520317d217b,remove,tells the user to use an OTP to receive a delivery
+176244f626af,remove,contradictory: says do not share an OTP but to give it to the agent
+2d630b05f693,remove,tells the user to keep the delivery OTP ready
+bd98ba45d537,remove,tells the user to keep the delivery OTP
+fbf084304eaa,remove,tells the user to be available with the delivery OTP
+0cd283e96718,remove,tells the user to use an OTP to complete a payment
+858802ffea1b,remove,tells the user to keep the phone ready for an OTP
+044c77eb9e98,remove,tells the user to keep the OTP ready for the courier
+e5431c41c2b9,remove,tells the user to use an OTP at hand
+f2797d570c9d,remove,tells the user to keep the delivery OTP ready
+2563c52cb534,remove,tells the user to confirm receipt with an OTP
+37e14e17cad8,remove,contradictory: says do not share an OTP but to tell it to the delivery person
+c9017a3bf596,remove,hard-negative rule broken: domain_mismatch (rule applied to the whole safe class)
+4508f3405ef6,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+678dec1df18d,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+6ccde894c37a,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+362219bf746c,flip,unrelated UIDAI domain in a non-Aadhaar message (rule applied to the whole safe class)
+a5f74943945f,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+5f2ddb9f9096,flip,unrelated UIDAI domain in a non-Aadhaar message (rule applied to the whole safe class)
+98ebbef28c5c,flip,unrelated UIDAI domain in a non-Aadhaar message (rule applied to the whole safe class)
+a6be57d0554b,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+50832f1c3632,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+f02171635c2f,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+f25aa2aa0674,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+c25e71933390,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+aa18faf95b30,remove,hard-negative rule broken: otp_action (rule applied to the whole safe class)
+83967ac187fc,flip,unrelated UIDAI domain in a non-Aadhaar message (rule applied to the whole safe class)
+e223b4efc0fb,remove,hard-negative rule broken: domain_mismatch (rule applied to the whole safe class)
+a2d97513c5e9,remove,hard-negative rule broken: domain_mismatch (rule applied to the whole safe class)
+1227e3835805,remove,hard-negative rule broken: domain_mismatch (rule applied to the whole safe class)
+30d1cde82123,remove,hard-negative rule broken: domain_mismatch (rule applied to the whole safe class)

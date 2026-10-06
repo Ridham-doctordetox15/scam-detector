@@ -1,0 +1,51 @@
+# Inference/API stack: everything the deployed FastAPI backend (Phase 9) imports, and
+# nothing else (no training, EDA or data-download libraries). Self-contained: the Docker
+# image installs only this file. Versions pinned to what was installed and tested locally
+# on Python 3.11.9. The package list was derived by importing the API's full module chain.
+#
+# torch/torchvision are CPU-only builds. Install with the CPU wheel index so pip doesn't
+# pull the much larger CUDA build:
+#   pip install -r requirements-api.txt --extra-index-url https://download.pytorch.org/whl/cpu
+
+# Web API (Phase 9)
+fastapi==0.141.1
+starlette==1.7.0
+uvicorn==0.54.0
+python-multipart==0.0.32
+httpx==0.28.1                 # Supabase REST calls (no Supabase SDK needed)
+huggingface_hub==1.33.0       # private model repo download at build time
+python-dotenv==1.2.3
+
+# Classifier (TF-IDF + Linear SVM). scikit-learn MUST match the version the .joblib was
+# pickled with (1.9.1), or loading can fail or silently change behaviour.
+scikit-learn==1.9.1
+joblib==1.6.0
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.0.6                 # imported by src.preprocessing.preprocess
+
+# URL analyzer (Phase 5)
+requests==2.34.2              # also the Groq/Gemini HTTP client (Phase 7)
+tldextract==5.3.2             # uses its bundled suffix list: no runtime download
+requests-file==3.0.1
+rapidfuzz==3.14.6
+
+# RAG (Phase 6)
+torch==2.14.0+cpu
+transformers==5.17.0
+sentence-transformers==6.1.0
+chromadb==1.5.9
+
+# LLM explainer (Phase 7): strict-JSON output validation
+pydantic==2.13.5
+
+# Screenshot OCR (Phase 8). Models (313 MB for en+hi) are pre-fetched at image build time
+# by `python -m api.prefetch` (or `python -m src.ocr.ocr` locally).
+easyocr==1.7.2
+torchvision==0.29.0+cpu
+opencv-python-headless==5.0.0.93
+Pillow==12.3.0
+
+# The optional ONNX DistilBERT classifier (USE_ONNX_CLASSIFIER=true, off by default) also
+# needs onnxruntime==1.30.0 and tokenizers==0.23.2 plus its model files; they are not
+# installed in the image because the deployed classifier is TF-IDF (results.md, Phase 4).

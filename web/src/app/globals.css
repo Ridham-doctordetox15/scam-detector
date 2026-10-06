@@ -1,0 +1,241 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * Design tokens - defined once, used through Tailwind utilities (bg-card, text-risk-high-fg, ...).
+ * Light values on :root, dark values on .dark (set by next-themes from the System / Light / Dark
+ * switch). src/lib/contrast.test.ts parses both blocks and checks every text pair for WCAG AA
+ * (4.5:1) and every graphic colour (gauge, borders of risk chips) for 3:1.
+ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --radius: 0.75rem;
+
+  --background: #fafafa;
+  --foreground: #0f1115;
+  --card: #ffffff;
+  --card-foreground: #0f1115;
+  --popover: #ffffff;
+  --popover-foreground: #0f1115;
+  --primary: #3b54d6;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f2f5;
+  --secondary-foreground: #1a1d24;
+  --muted: #f1f2f5;
+  --muted-foreground: #565c69;
+  --accent: #eef1fd;
+  --accent-foreground: #2a3fb0;
+  --destructive: #b4232c;
+  --border: #e3e5ea;
+  --input: #8d9096;
+  --ring: #3b54d6;
+  --subtle: #f6f7f9;
+
+  /* Risk bands: fg = text, bg = tint, border = hairline, solid = gauge/graphics. */
+  --risk-low-fg: #0b6b3a;
+  --risk-low-bg: #e8f6ee;
+  --risk-low-border: #a6ddbe;
+  --risk-low-solid: #15924f;
+  --risk-medium-fg: #8a4b00;
+  --risk-medium-bg: #fff4e0;
+  --risk-medium-border: #f2ce8a;
+  --risk-medium-solid: #c27803;
+  --risk-high-fg: #b4232c;
+  --risk-high-bg: #fdecec;
+  --risk-high-border: #f4b4b7;
+  --risk-high-solid: #d8323b;
+
+  --shadow-color: 220 20% 20%;
+}
+
+.dark {
+  --background: #0b0d10;
+  --foreground: #eceef2;
+  --card: #14171c;
+  --card-foreground: #eceef2;
+  --popover: #181b21;
+  --popover-foreground: #eceef2;
+  --primary: #93a5ff;
+  --primary-foreground: #0b1022;
+  --secondary: #1e222a;
+  --secondary-foreground: #e4e7ec;
+  --muted: #1e222a;
+  --muted-foreground: #a3a9b6;
+  --accent: #1c2340;
+  --accent-foreground: #c3ceff;
+  --destructive: #ff9a9f;
+  --border: #262b33;
+  --input: #5c6578;
+  --ring: #93a5ff;
+  --subtle: #111418;
+
+  --risk-low-fg: #6ee7a8;
+  --risk-low-bg: #0e2a1c;
+  --risk-low-border: #1f5a3b;
+  --risk-low-solid: #34c77b;
+  --risk-medium-fg: #ffc66b;
+  --risk-medium-bg: #2e2108;
+  --risk-medium-border: #6b4a12;
+  --risk-medium-solid: #f0a43a;
+  --risk-high-fg: #ff9a9f;
+  --risk-high-bg: #36141a;
+  --risk-high-border: #7a2830;
+  --risk-high-solid: #f2555e;
+
+  --shadow-color: 220 40% 2%;
+}
+
+@theme inline {
+  --font-sans: var(--font-latin, "Noto Sans"), var(--font-deva, "Noto Sans Devanagari"), ui-sans-serif, system-ui,
+    "Segoe UI", Roboto, sans-serif;
+  /* Not "--font-deva": that name is next/font's variable, and redefining it here would refer to itself. */
+  --font-devanagari: var(--font-deva, "Noto Sans Devanagari"), var(--font-latin, "Noto Sans"), "Nirmala UI", "Mangal",
+    sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, "Liberation Mono", monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-subtle: var(--subtle);
+
+  --color-risk-low-fg: var(--risk-low-fg);
+  --color-risk-low-bg: var(--risk-low-bg);
+  --color-risk-low-border: var(--risk-low-border);
+  --color-risk-low-solid: var(--risk-low-solid);
+  --color-risk-medium-fg: var(--risk-medium-fg);
+  --color-risk-medium-bg: var(--risk-medium-bg);
+  --color-risk-medium-border: var(--risk-medium-border);
+  --color-risk-medium-solid: var(--risk-medium-solid);
+  --color-risk-high-fg: var(--risk-high-fg);
+  --color-risk-high-bg: var(--risk-high-bg);
+  --color-risk-high-border: var(--risk-high-border);
+  --color-risk-high-solid: var(--risk-high-solid);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --shadow-soft: 0 1px 2px hsl(var(--shadow-color) / 0.06), 0 2px 8px hsl(var(--shadow-color) / 0.05);
+  --shadow-lift: 0 1px 2px hsl(var(--shadow-color) / 0.06), 0 8px 24px -6px hsl(var(--shadow-color) / 0.12),
+    0 24px 48px -12px hsl(var(--shadow-color) / 0.1);
+
+  --animate-shimmer: shimmer 1.6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    text-rendering: optimizeLegibility;
+  }
+  :is(h1, h2, h3, h4) {
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+
+  [lang="en"],
+  [lang="hi-Latn"] {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+}
+
+@layer utilities {
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .shimmer {
+    background: linear-gradient(90deg, var(--muted) 0%, var(--subtle) 50%, var(--muted) 100%);
+    background-size: 200% 100%;
+    animation: var(--animate-shimmer);
+  }
+  .bg-grid {
+    background-image: radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--foreground) 9%, transparent) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+}
+
+/*
+ * Devanagari: its own font first, taller lines so vowel marks aren't clipped, and no letter spacing
+ * (it breaks the headline stroke). Deliberately outside @layer so it also beats utilities such as
+ * text-sm that set their own line height. :lang() follows the nearest lang attribute, so English or
+ * Hinglish (hi-Latn) blocks inside a Hindi page are not affected, and vice versa.
+ */
+:lang(hi):not(:lang(hi-Latn)) {
+  font-family: var(--font-devanagari);
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+:is(h1, h2, h3, h4):lang(hi):not(:lang(hi-Latn)) {
+  line-height: 1.5;
+}
+
+/* Reduced motion: no shimmer, no spin, no CSS transitions. Motion components follow the same
+   setting through <MotionConfig reducedMotion="user">. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

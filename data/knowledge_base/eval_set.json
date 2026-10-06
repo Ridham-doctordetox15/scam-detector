@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "text": "Dear customer, we noticed your KYC verification is incomplete and your net banking access will be suspended by midnight. Please update it immediately using the secure link below to avoid disruption.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "fake_kyc_update",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Aapka mobile number ka KYC verify nahi hua hai, 24 ghante ke andar update nahi kiya to SIM band ho jayega. Neeche diye gaye link par click karke turant KYC complete karein.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "fake_kyc_update",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Suchna: aapke ghar ki bijli connection aaj raat band kar diya jayega kyunki pichla bill jama nahi hua hai. Sahayak se baat karne ke liye is number par call karein aur naya app install karein.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "electricity_bill_disconnection",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Notice: an international package addressed to you is currently held at the customs office pending a small clearance charge. Complete the payment below within 24 hours or the parcel will be returned.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "courier_customs_fee",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Aapka parcel airport customs mein atka hua hai kyunki chhota sa import tax abhi tak nahi bhara gaya hai. Jaldi se yeh charge pay karke apna parcel release karayein.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "courier_customs_fee",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "We attempted delivery but the address on file doesn't match our records. Please confirm your correct shipping address within the next day, otherwise the item will be sent back to the seller.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "parcel_address_mismatch",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Great news! Your mobile number has been randomly selected in our anniversary draw for a cash reward of five lakh rupees. To process the transfer, kindly share your account details with our claims officer today.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "lottery_prize_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Aapka number iss mahine ke lucky draw mein select hua hai aur aapko 10 lakh rupaye ka inaam mila hai. Inaam paane ke liye chhoti si registration fee jama karni hogi.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "lottery_prize_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Hi, we're hiring for a simple work-from-home role - just subscribe to a few channels and rate some apps daily. Payment starts immediately, and you can join our group chat to get started.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "part_time_job_task_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Ghar baithe part time kaam karo, sirf youtube video ko like karna hai aur roz paisa milega. Telegram group join karo aur pehla task abhi shuru karo.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "part_time_job_task_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "You have been shortlisted for a quick personal loan of two lakh rupees with zero paperwork. To release the funds today, a small processing charge needs to be paid via UPI first.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "loan_offer_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Bina kisi document ke aapka instant loan approve ho gaya hai. Paisa account mein turant transfer karne ke liye pehle ek chhota sa processing charge bharna hoga.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "loan_offer_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Hello, this is regarding a suspicious transaction attempt on your card. To block it immediately, please read out the verification code that was just sent to your phone.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "fake_bank_otp_request",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Sir maine dekha aapke account se ek galat transaction hone wala hai, ise rokne ke liye jo code aapke phone par aaya hai wo mujhe bata dein.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "fake_bank_otp_request",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Hey, I just sent you a payment request for the item - just enter your UPI PIN on the notification to accept and get the money in your account.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "upi_collect_request_fraud",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Maine aapko payment bheja hai, bas request accept karo aur apna upi pin daal do, paisa turant aa jayega.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "upi_collect_request_fraud",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "I recorded everything from our video call earlier. Send the payment within the next hour or this gets shared with everyone in your contact list.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "sextortion_video_call_threat",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Maine hamari video call ka recording bana liya hai, agar paisa nahi bheja to yeh sabhi ko bhej dunga.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "sextortion_video_call_threat",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "This is an official cybercrime notice. A parcel booked under your Aadhaar number contains illegal substances, and you must stay on this video call and transfer funds to an escrow account to avoid immediate arrest.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "digital_arrest_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Aapke naam se ek illegal parcel pakda gaya hai, police case ban gaya hai. Jab tak video call par ho, disconnect mat karo, aur apni innocence prove karne ke liye bataye gaye account mein paise transfer karo.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "digital_arrest_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Our certified market analyst has an incredible track record with almost no losses this year. Join the premium tips group today by making your first small deposit to start trading.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "investment_stock_tips_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Humare trading group mein daily guaranteed profit milta hai, kisi ne bhi loss nahi kiya. Aaj hi deposit karke shuru karo aur kal se munafa lena shuru karo.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "investment_stock_tips_scam",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Thank you for reaching wallet support. To verify your refund request, please install the remote assistance tool we're sending so our agent can fix it directly on your phone.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "fake_customer_care_number",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Aapki complaint humein mil gayi hai, refund process karne ke liye pehle verification ke taur par ek rupaya iss upi id par bhejiye, wapas mil jayega.",
+      "language": "hinglish",
+      "label": "scam",
+      "expected_pattern_id": "fake_customer_care_number",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "This is a final notice regarding the reward linked to your mobile number. Please ring our claims line right away to have it processed before the offer closes today.",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "premium_rate_prize_lure",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Use 291045 to complete your net banking login. This code is valid for 5 minutes and should never be shared with anyone, including our staff.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_bank_otp_alert",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Aapke payment ko confirm karne ke liye code hai 573820, yeh 10 minute ke liye valid hai, kisi ke saath share na karein.",
+      "language": "hinglish",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_bank_otp_alert",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "This is a reminder that your postpaid mobile bill of Rs. 449 is due on the 20th of this month. You can pay conveniently through our official app or website.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_bill_reminder",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Aapka is mahine ka bijli bill 860 rupaye ka hai jo 12 tareek tak jama karna hai, aap ise apne discom ki website ya app se pay kar sakte hain.",
+      "language": "hinglish",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_bill_reminder",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Your order is out for delivery and should reach you between 3pm and 7pm today. You can track its live location anytime from within the app.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_delivery_update",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Aapka parcel deliver ho gaya hai, humse shopping karne ke liye shukriya. Koi bhi sawal ho to app mein order history dekhein.",
+      "language": "hinglish",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_delivery_update",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "This festive season enjoy flat 20% off across all our stores, valid till Sunday. Visit your nearest outlet or shop online to grab the deal.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "legitimate_brand_promotion",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Iss weekend hamare app par recharge karo aur milega extra data bilkul free, offer sirf aaj ke liye valid hai.",
+      "language": "hinglish",
+      "label": "legitimate",
+      "expected_pattern_id": "legitimate_brand_promotion",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Your account password was just changed successfully from a device you're using now. If this wasn't you, please contact our support team right away.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_password_reset_alert",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Just a reminder that your consultation is scheduled for tomorrow at 4pm at our clinic. Please arrive 10 minutes early to complete the paperwork.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_appointment_reminder",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Your monthly streaming subscription will renew automatically on the 8th for the usual amount. You can manage or cancel this anytime from your account settings.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_subscription_renewal_notice",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "An amount of Rs. 2,340 was debited from your account ending 7743 today at a merchant outlet. Your updated available balance is Rs. 18,905.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_bank_statement_notification",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Your order has been confirmed and billed at Rs. 1,150. You can view the detailed invoice and track your shipment anytime in the app.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_ecommerce_order_confirmation",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "Your application under the housing subsidy scheme has moved to the verification stage. Please visit your nearest municipal office with the required documents.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "legitimate_government_scheme_update",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "We were impressed with your application for the data analyst position at our company and would like to schedule a short interview this week. Please let us know your availability.",
+      "language": "en",
+      "label": "legitimate",
+      "expected_pattern_id": "genuine_interview_job_offer",
+      "origin": "written",
+      "source": null,
+      "notes": null
+    },
+    {
+      "text": "You are awarded a SiPix Digital Camera! call <PHONE> from landline. Delivery within 28days. T Cs Box177. M221BP. 2yr warranty. 150ppm. 16. p p<CUR> 3.99",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "premium_rate_prize_lure",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[1]",
+      "notes": null
+    },
+    {
+      "text": "URGENT! We are trying to contact U. Todays draw shows that you have won a <CUR> 800 prize GUARANTEED. Call <PHONE> from land line. Claim A21. Valid 12hrs only",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "premium_rate_prize_lure",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[2]",
+      "notes": null
+    },
+    {
+      "text": "YOU HAVE WON! As a valued Vodafone customer our computer has picked YOU to win a <CUR> 150 prize. To collect is easy. Just call <PHONE>",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "premium_rate_prize_lure",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[3]",
+      "notes": null
+    },
+    {
+      "text": "As a valued customer, I am pleased to advise you that following recent review of your Mob No. you are awarded with a <CUR> 1500 Bonus Prize, call <PHONE>",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "lottery_prize_scam",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[4]",
+      "notes": null
+    },
+    {
+      "text": "You have won ?1,000 cash or a ?2,000 prize! To claim, call09050000327",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "lottery_prize_scam",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[5]",
+      "notes": null
+    },
+    {
+      "text": "URGENT!! Your 4* Costa Del Sol Holiday or <CUR> 5000 await collection. Call <PHONE> Now toClaim. SAE, TC s, POBox334, Stockport, SK38xh, Cost<CUR> 1.50/pm, Max10mins",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "premium_rate_prize_lure",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[8]",
+      "notes": null
+    },
+    {
+      "text": "This is the 2nd attempt to contract U, you have won this weeks top prize of either <CUR> 1000 cash or <CUR> 200 prize. Just call <PHONE>",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "lottery_prize_scam",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[9]",
+      "notes": null
+    },
+    {
+      "text": "PRIVATE! Your <YEAR> Account Statement for <PHONE> shows 800 un-redeemed S.I.M. points. Call <PHONE> Identifier Code 41782 Expires 18/11/04",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "no_match",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[14]",
+      "notes": "Fake 'unredeemed points' account-statement lure; no close KB analog."
+    },
+    {
+      "text": "Someone U know has asked our dating service 2 contact you! Cant Guess who? CALL <PHONE> NOW all will be revealed. PO BOX385 M6 6WU",
+      "language": "en",
+      "label": "scam",
+      "expected_pattern_id": "no_match",
+      "origin": "real",
+      "source": "uci_sms_spam:fraud[21]",
+      "notes": "Dating-service curiosity lure; no close KB analog."
+    },
+    {
+      "text": "Your credits have been topped up for <URL> Your renewal Pin is tgxxrz",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "genuine_subscription_renewal_notice",
+      "origin": "real",
+      "source": "uci_sms_spam:service[1]",
+      "notes": null
+    },
+    {
+      "text": "Thanks for your ringtone order, reference number X29. Your mobile will be charged 4.50. Should your tone not arrive please call customer services <PHONE>",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "genuine_ecommerce_order_confirmation",
+      "origin": "real",
+      "source": "uci_sms_spam:service[8]",
+      "notes": null
+    },
+    {
+      "text": "Thanks for your Ringtone Order, Reference T91. You will be charged GBP 4 per week. You can unsubscribe at anytime by calling customer services on <PHONE>",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "genuine_subscription_renewal_notice",
+      "origin": "real",
+      "source": "uci_sms_spam:service[9]",
+      "notes": null
+    },
+    {
+      "text": "THE BIG BULL starring Abhishek Bachchan dekhiye Disney+ Hotstar VIP par. Vi ke naye 401 recharge pe paiye 1yr Disney+ Hotstar VIP & 100GB data (3GB/day +16GB) + Unlimited Calls; 28days. Click <URL>",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "legitimate_brand_promotion",
+      "origin": "real",
+      "source": "kaggle_india_spam_sms:promo[0]",
+      "notes": null
+    },
+    {
+      "text": "Biggest Diwali Offers@ VISHAL Mixer Grinder 3Jar(Mrp 2499) 45%OFF- <CUR> 1374 ONLY TODAY + FREE-VIP Trolley,Duffle Bag + 7.5% SBI Cashback TnC",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "legitimate_brand_promotion",
+      "origin": "real",
+      "source": "kaggle_india_spam_sms:promo[1]",
+      "notes": null
+    },
+    {
+      "text": "Get Lifetime FREE Card + 5% Unlimited Cashback with Flipkart Axis Bank Credit Card. Hurry! Limited Period Offer. Apply Now: <URL>",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "legitimate_brand_promotion",
+      "origin": "real",
+      "source": "kaggle_india_spam_sms:promo[6]",
+      "notes": null
+    },
+    {
+      "text": "FREE DATA ALERT! Avail 2GB FREE data on your next Airtel Recharge on Airtel Thanks App. Download today, T&C <URL>",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "legitimate_brand_promotion",
+      "origin": "real",
+      "source": "kaggle_india_spam_sms:promo[10]",
+      "notes": null
+    },
+    {
+      "text": "Dear Denima, Hope you enjoyed your shopping at Lifestyle! Click To View Your e-invoice <URL>",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "genuine_ecommerce_order_confirmation",
+      "origin": "real",
+      "source": "kaggle_india_spam_sms:promo[15]",
+      "notes": null
+    },
+    {
+      "text": "Congrats 99467696XX, Your Credit Card Of Limit <CUR> 500000 Is Ready for Pre-approval.T&C Apply, Click here: <URL>",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "legitimate_brand_promotion",
+      "origin": "real",
+      "source": "kaggle_india_spam_sms:promo[20]",
+      "notes": "Real bank pre-approved-credit-limit marketing SMS; structurally resembles loan_offer_scam but is a genuine promotion with no fee requested - a deliberately tricky boundary case."
+    },
+    {
+      "text": "TRAI never sends any message or makes any call for verification/ disconnection/ reporting unlawful activities of mobile numbers. Beware of such messages/calls in the name of TRAI. Any call or message claiming to be from TRAI should be considered potentially fraudulent and may be reported to the National Cyber Crime Reporting Portal (<URL>) or Cyber Crime Helpline (1930).",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "no_match",
+      "origin": "real",
+      "source": "kaggle_india_spam_sms:promo[69]",
+      "notes": "TRAI's own anti-fraud advisory; no close KB analog (it warns about scams rather than being one)."
+    },
+    {
+      "text": "Dear Digi Yatri, Your OTP for Digi Yatra App is 779357 Have a seamless and health-risk-free journey. Thanks, Digi Yatra Foundation 6q3sJ5ApRx2",
+      "language": "en",
+      "label": "safe",
+      "expected_pattern_id": "genuine_bank_otp_alert",
+      "origin": "real",
+      "source": "kaggle_india_spam_sms:service[0]",
+      "notes": "OTP delivery notice from a travel app, not a bank, but the same harmless code-delivery pattern; used as the closest analog."
+    }
+  ]
+}

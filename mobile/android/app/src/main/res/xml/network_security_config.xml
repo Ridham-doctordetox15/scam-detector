@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Release (and profile) builds: HTTPS only. Plain HTTP is refused by Android itself, on top of
+     the HTTPS-only check in lib/config/api_config.dart. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

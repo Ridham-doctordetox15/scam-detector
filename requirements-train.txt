@@ -1,0 +1,8 @@
+# Phase 4 (transformer fine-tuning): installed on Colab / Kaggle GPU runtimes, NOT locally and NOT in the Docker image.
+# The notebook (notebooks/02_train_transformers.ipynb) installs exactly these pins itself (PINNED list in its setup cell).
+# torch is deliberately not pinned: Colab ships a CUDA build matched to its GPU driver; the notebook prints the version it ran on
+# and records it in phase4_results.json. Versions below were the latest on PyPI on 2026-09-26.
+transformers==5.17.0
+tokenizers==0.23.2
+onnx==1.23.0
+onnxruntime==1.30.0

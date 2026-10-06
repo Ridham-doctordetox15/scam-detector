@@ -1,0 +1,469 @@
+{
+  "recorded_at": "2026-09-30T13:25:19.737Z",
+  "note": "Real responses from the project API (local run) for the built-in samples only. Recorded by web/scripts/record-demo.mjs.",
+  "responses": {
+    "en_kyc_link": {
+      "prediction_id": "1a573fed-8085-459f-8cf1-dca8ff397209",
+      "input_type": "text",
+      "verdict": "scam",
+      "risk_level": "high",
+      "red_flags": [
+        "Urgent threat of account block",
+        "Requests clicking a link to update KYC",
+        "Impersonates a bank with generic greeting"
+      ],
+      "explanation": "The message creates false urgency, threatens to block the account, and asks the recipient to follow a suspicious link to \"update\" KYC, which is a classic phishing tactic.",
+      "what_to_do": [
+        "Do not click the link",
+        "Do not provide any personal or financial information",
+        "Contact the bank using official contact details",
+        "Report the message as phishing"
+      ],
+      "matched_pattern": "fake_kyc_update",
+      "url_findings": [
+        {
+          "url_defanged": "hxxp://sbi-kyc-verify[.]tk/update",
+          "risk_band": "high",
+          "reasons": [
+            "Domain embeds the brand name \"sbi\" but is not sbi's real domain",
+            "Uses a top-level domain often abused for phishing (.tk)",
+            "URL contains suspicious keyword(s): kyc, update, verify",
+            "Connection is not HTTPS"
+          ]
+        }
+      ],
+      "explainer_path": "groq",
+      "language": "en",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "mask": 0.1,
+        "classify": 20.7,
+        "analyze_urls": 17.8,
+        "retrieve_patterns": 17.6,
+        "explain": 1296.3
+      },
+      "ocr": null,
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "en_otp_call": {
+      "prediction_id": "167792ac-c499-4722-801d-9d7840713bc3",
+      "input_type": "text",
+      "verdict": "scam",
+      "risk_level": "medium",
+      "red_flags": [
+        "asks for verification code (OTP) to be read out",
+        "creates urgency to block a transaction",
+        "unusual request from unknown sender"
+      ],
+      "explanation": "The message pretends to be about a suspicious transaction and pressures the recipient to disclose a one‑time password, which is a classic tactic used by scammers to steal banking credentials.",
+      "what_to_do": [
+        "Do not share the verification code or any personal information",
+        "Contact your bank directly using an official phone number or app",
+        "Delete the message and block the sender"
+      ],
+      "matched_pattern": "fake_bank_otp_request",
+      "url_findings": [],
+      "explainer_path": "groq",
+      "language": "en",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "mask": 0.2,
+        "classify": 4.8,
+        "analyze_urls": 0,
+        "retrieve_patterns": 24.8,
+        "explain": 1183.5
+      },
+      "ocr": null,
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "hinglish_bijli_link": {
+      "prediction_id": "7facb3ca-fd03-484c-b7b1-e8f842e2d4cb",
+      "input_type": "text",
+      "verdict": "scam",
+      "risk_level": "high",
+      "red_flags": [
+        "urgency threat (kat jayega)",
+        "suspicious link without HTTPS",
+        "use of .top domain",
+        "payment request for unpaid bill",
+        "generic greeting, no account details"
+      ],
+      "explanation": "Message me bahut jaldi payment karne ki dhamki hai aur ek insecure .top URL diya gaya hai, jo typical phishing aur scam ka pattern hai.",
+      "what_to_do": [
+        "is link ko click na kare",
+        "official electricity provider ki website ya app se bill check kare",
+        "suspicious message ko report kare",
+        "personal info ya payment details share na kare"
+      ],
+      "matched_pattern": null,
+      "url_findings": [
+        {
+          "url_defanged": "hxxp://bijli-bill-update[.]top/pay",
+          "risk_band": "medium",
+          "reasons": [
+            "Uses a top-level domain often abused for phishing (.top)",
+            "URL contains suspicious keyword(s): update",
+            "Connection is not HTTPS"
+          ]
+        }
+      ],
+      "explainer_path": "groq",
+      "language": "hinglish",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "mask": 0.1,
+        "classify": 2.7,
+        "analyze_urls": 0.1,
+        "retrieve_patterns": 25.9,
+        "explain": 2093.8
+      },
+      "ocr": null,
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "hinglish_lottery": {
+      "prediction_id": "41c899e8-3aaa-4e89-92ce-fa2057d12e87",
+      "input_type": "text",
+      "verdict": "scam",
+      "risk_level": "medium",
+      "red_flags": [
+        "unsolicited prize claim",
+        "request for bank details",
+        "urgency to act quickly",
+        "large cash amount promised"
+      ],
+      "explanation": "Message me aapko bina maange lucky draw ka claim dikhata hai aur turant bank details maang raha hai, jo typical scam ka pattern hai.",
+      "what_to_do": [
+        "reply na karein",
+        "bank details kabhi share na karein",
+        "message block karein",
+        "report karein spam ya fraud ke roop me"
+      ],
+      "matched_pattern": null,
+      "url_findings": [],
+      "explainer_path": "groq",
+      "language": "hinglish",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "mask": 0.2,
+        "classify": 5.1,
+        "analyze_urls": 0,
+        "retrieve_patterns": 36.2,
+        "explain": 1076.4
+      },
+      "ocr": null,
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "en_lunch": {
+      "prediction_id": "8b31ddf4-a263-4e09-875f-b12302589c15",
+      "input_type": "text",
+      "verdict": "safe",
+      "risk_level": "low",
+      "red_flags": [],
+      "explanation": "The message is a simple, benign request about a lunch appointment and shows no signs of scam or malicious content.",
+      "what_to_do": [
+        "No special action needed",
+        "Reply or confirm the lunch plans if appropriate"
+      ],
+      "matched_pattern": null,
+      "url_findings": [],
+      "explainer_path": "groq",
+      "language": "en",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "mask": 0.1,
+        "classify": 4.2,
+        "analyze_urls": 0,
+        "retrieve_patterns": 22,
+        "explain": 1070.1
+      },
+      "ocr": null,
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "hinglish_vi_offer": {
+      "prediction_id": "51906b43-6089-4532-a5fa-3fd674a89dc2",
+      "input_type": "text",
+      "verdict": "safe",
+      "risk_level": "low",
+      "red_flags": [],
+      "explanation": "Message simple promotional text hai, koi direct fraud ya personal info maangne wala element nahi hai, isliye low risk aur safe mana gaya hai.",
+      "what_to_do": [
+        "Link ko apne browser se manually check karo",
+        "Kisi bhi personal ya financial info ko share na karo",
+        "Agar doubt ho to official app ya website se verify karo"
+      ],
+      "matched_pattern": null,
+      "url_findings": [
+        {
+          "url_defanged": "hxxps://www[.]myvi[.]in/offers",
+          "risk_band": "low",
+          "reasons": []
+        }
+      ],
+      "explainer_path": "groq",
+      "language": "hinglish",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "mask": 0.2,
+        "classify": 7.7,
+        "analyze_urls": 0.4,
+        "retrieve_patterns": 21.5,
+        "explain": 1133.5
+      },
+      "ocr": null,
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "hindi_kyc_link": {
+      "prediction_id": "591de876-4504-47d6-b292-c246346a7fb4",
+      "input_type": "text",
+      "verdict": "scam",
+      "risk_level": "high",
+      "red_flags": [
+        "असुरक्षित लिंक (HTTP)",
+        "आपातकालीन भाषा",
+        "KYC अपडेट का आग्रह",
+        "खाता बंद होने की झूठी धमकी"
+      ],
+      "explanation": "संदेश में असुरक्षित HTTP लिंक, त्वरित कार्रवाई की धमकी और KYC अपडेट का झूठा अनुरोध है, जो उपयोगकर्ता को डराकर निजी जानकारी देने या फ़िशिंग साइट पर ले जाने का प्रयास करता है।",
+      "what_to_do": [
+        "लिंक पर क्लिक न करें",
+        "बैंक से सीधे संपर्क करें",
+        "संदेश को हटाएँ",
+        "व्यक्तिगत जानकारी न दें"
+      ],
+      "matched_pattern": "fake_kyc_update",
+      "url_findings": [
+        {
+          "url_defanged": "hxxp://kyc-seva-update[.]top/login",
+          "risk_band": "medium",
+          "reasons": [
+            "Uses a top-level domain often abused for phishing (.top)",
+            "URL contains suspicious keyword(s): kyc, login, update",
+            "Connection is not HTTPS"
+          ]
+        }
+      ],
+      "explainer_path": "groq",
+      "language": "hi",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "mask": 0.1,
+        "classify": 3,
+        "analyze_urls": 0.2,
+        "retrieve_patterns": 22.1,
+        "explain": 1364.3
+      },
+      "ocr": null,
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "shot_sms_kyc": {
+      "prediction_id": "3e74f37c-aa1e-4e68-b951-03ade31909ac",
+      "input_type": "image",
+      "verdict": "scam",
+      "risk_level": "high",
+      "red_flags": [
+        "urgent threat of account block",
+        "request to click a link to update KYC",
+        "generic greeting without personal details",
+        "unknown sender (VK-BNKALR)",
+        "use of a suspicious URL"
+      ],
+      "explanation": "The message creates urgency by threatening to block the account within 24 hours and asks the recipient to click a link to update KYC information. It comes from an unknown sender, uses a generic greeting, and includes a suspicious URL, which are common tactics in phishing scams.",
+      "what_to_do": [
+        "Do not click the link",
+        "Do not provide any personal or financial information",
+        "Verify the claim by contacting the bank through official channels",
+        "Report the message to the bank or relevant authorities",
+        "Delete the message"
+      ],
+      "matched_pattern": "fake_kyc_update",
+      "url_findings": [
+        {
+          "url_defanged": "hxxp://sbi-kyc-verify[.]tk/update",
+          "risk_band": "high",
+          "reasons": [
+            "Domain embeds the brand name \"sbi\" but is not sbi's real domain",
+            "Uses a top-level domain often abused for phishing (.tk)",
+            "URL contains suspicious keyword(s): kyc, update, verify",
+            "Connection is not HTTPS"
+          ]
+        }
+      ],
+      "explainer_path": "groq",
+      "language": "en",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "validate": 5.5,
+        "ocr": 3897.9,
+        "mask": 0.1,
+        "classify": 2.5,
+        "analyze_urls": 0.1,
+        "retrieve_patterns": 16.9,
+        "explain": 1290.4
+      },
+      "ocr": {
+        "extracted_text": "VK-BNKALR\n\nDear customer; your KYC is not updated Your account will be BLOCKED within 24 hours Update immediately: http://sbi-kyc-verify.tk/update\n\nWho is this?",
+        "quality": "good",
+        "dark_mode": false
+      },
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "shot_whatsapp_lottery": {
+      "prediction_id": "92d2c79a-8e9e-4137-8b63-6b337e4fb50c",
+      "input_type": "image",
+      "verdict": "scam",
+      "risk_level": "high",
+      "red_flags": [
+        "lucky draw claim",
+        "bank account number aur IFSC maang raha hai",
+        "processing fee Rs 4999 ki demand",
+        "turant payment na karne par prize cancel ka threat"
+      ],
+      "explanation": "Message me fake lucky draw ka offer hai, jisme aap se bank details aur fee maangi ja rahi hai, aur turant action na karne par prize cancel hone ki dhamki di gayi hai. Ye sab typical scam ke red flags hain.",
+      "what_to_do": [
+        "message ignore karo",
+        "kabhi bhi personal ya bank details share na karo",
+        "sender ko block karo",
+        "scam ki report apne telecom ya police ko karo"
+      ],
+      "matched_pattern": "genuine_bank_statement_notification",
+      "url_findings": [],
+      "explainer_path": "groq",
+      "language": "hinglish",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "validate": 14.5,
+        "ocr": 3655.2,
+        "mask": 0.1,
+        "classify": 2.8,
+        "analyze_urls": 0,
+        "retrieve_patterns": 25,
+        "explain": 1365.9
+      },
+      "ocr": {
+        "extracted_text": "+91 98XXX XXX21\n\nCongratulations! Aapka number lucky draw mein select hua hai 10 lakh rupaye jeetne ke liye turant apna bank account number aur IFSC bhejein\n\nProcessing fee sirf Rs 4999 hai, aaj hi pay karein warna prize cancel ho jayega:\n\nAap kaun bol rahe ho?",
+        "quality": "good",
+        "dark_mode": false
+      },
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "shot_sms_lunch": {
+      "prediction_id": "8746d99a-cfd6-4d92-9819-1e24eb0baa90",
+      "input_type": "image",
+      "verdict": "safe",
+      "risk_level": "low",
+      "red_flags": [],
+      "explanation": "The message is a harmless personal invitation for lunch with no suspicious content or links, matching no known scam patterns.",
+      "what_to_do": [
+        "No special action needed",
+        "Proceed with the planned lunch as usual"
+      ],
+      "matched_pattern": null,
+      "url_findings": [],
+      "explainer_path": "groq",
+      "language": "en",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "validate": 5.7,
+        "ocr": 3141.4,
+        "mask": 0.1,
+        "classify": 2.4,
+        "analyze_urls": 0,
+        "retrieve_patterns": 18.1,
+        "explain": 993.1
+      },
+      "ocr": {
+        "extracted_text": "Rahul\n\nHi, are we still on for lunch tomorrow at 1pm?\n\nYes! See you at the cafe near the office.\n\nGreat; will book a table for four:",
+        "quality": "good",
+        "dark_mode": false
+      },
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "shot_dark_parcel": {
+      "prediction_id": "2182ba95-6562-4c3b-8656-057f96ee5437",
+      "input_type": "image",
+      "verdict": "scam",
+      "risk_level": "high",
+      "red_flags": [
+        "Urgent deadline to pay within 12 hours",
+        "Request to pay a small fee to release a parcel",
+        "Link uses a suspicious domain (<URL>) and no HTTPS",
+        "Claims parcel is held due to incomplete address without official tracking details"
+      ],
+      "explanation": "The message uses common scam tactics: it creates urgency, asks for a payment through a suspicious link, and pretends to be an official courier demanding a small fee to release a package. The domain does not belong to the real India Post and is a known phishing pattern.",
+      "what_to_do": [
+        "Do not click the link or enter any payment information",
+        "Verify the claim by contacting India Post directly using official contact details",
+        "Delete the message",
+        "Report the scam to relevant authorities or the platform where it was received"
+      ],
+      "matched_pattern": "courier_customs_fee",
+      "url_findings": [
+        {
+          "url_defanged": "hxxp://indiapost-redeliver[.]top/pay",
+          "risk_band": "high",
+          "reasons": [
+            "Domain embeds the brand name \"indiapost\" but is not indiapost's real domain",
+            "Uses a top-level domain often abused for phishing (.top)",
+            "Connection is not HTTPS"
+          ]
+        }
+      ],
+      "explainer_path": "groq",
+      "language": "en",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "validate": 8.7,
+        "ocr": 3338.1,
+        "mask": 0.1,
+        "classify": 2.4,
+        "analyze_urls": 0.1,
+        "retrieve_patterns": 20.3,
+        "explain": 1539.4
+      },
+      "ocr": {
+        "extracted_text": "India Post Help\n\nYour parcel is on hold at our warehouse due to an incomplete address Pay the redelivery fee of Rs 25 within 12 hours or it will be returned: http://indiapost-redeliver.top/pay\n\nIs this real?",
+        "quality": "good",
+        "dark_mode": true
+      },
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    },
+    "shot_hindi_kyc": {
+      "prediction_id": "29a54641-c8ed-45cd-9cc0-10d5c88842ef",
+      "input_type": "image",
+      "verdict": "scam",
+      "risk_level": "medium",
+      "red_flags": [
+        "खाता बंद होने की धमकी",
+        "तुरंत KYC अपडेट करने का आग्रह",
+        "भय उत्पन्न करने वाला भाषा"
+      ],
+      "explanation": "संदेश में आपके बैंक खाते को बंद कर दिया जाएगा और तुरंत KYC अपडेट करने की धमकी दी गई है, जो सामान्यतः धोखेबाज़ी का तरीका है।",
+      "what_to_do": [
+        "संदेश को अनदेखा करें",
+        "लिंक या फ़ोन नंबर पर क्लिक न करें",
+        "व्यक्तिगत या बैंक विवरण साझा न करें",
+        "वास्तविक बैंक से सीधे संपर्क करें"
+      ],
+      "matched_pattern": "fake_kyc_update",
+      "url_findings": [],
+      "explainer_path": "groq",
+      "language": "hi",
+      "classifier_model": "tfidf_svm",
+      "timings_ms": {
+        "validate": 11.5,
+        "ocr": 3591.9,
+        "mask": 0,
+        "classify": 2,
+        "analyze_urls": 0,
+        "retrieve_patterns": 15,
+        "explain": 1278.8
+      },
+      "ocr": {
+        "extracted_text": "VK-BNKALR\n\nआपका बैंक खाता बंद हो जाएगा। तुरंत KYC अपडेट करें।",
+        "quality": "good",
+        "dark_mode": false
+      },
+      "disclaimer": "Automated assessment - it can be wrong. Never share OTPs, PINs or passwords, and verify requests through the official app or number of the organisation, not the message."
+    }
+  }
+}

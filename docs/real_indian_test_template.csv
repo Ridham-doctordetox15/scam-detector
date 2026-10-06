@@ -1,0 +1,3 @@
+text,label,scam_type,language,channel,collected_from,notes
+"Dear customer, your SBI YONO account will be blocked today. Update KYC now: http://sbi-kyc-update.example.top/login",scam,fake_kyc,en,sms,example,"Made-up example: delete this row"
+"Aapka OTP 482915 hai. Kisi ke saath share na karein. - HDFC Bank",safe,,hinglish,sms,example,"Made-up example: delete this row"

@@ -1,0 +1,10 @@
+{
+  "_comment": "SHA-256 pins for gitignored model artifacts, downloaded from a private HF model repo (see api/artifacts.py). Update the hash whenever the model is retrained and re-uploaded.",
+  "artifacts": [
+    {
+      "repo_filename": "svm.joblib",
+      "local_path": "models/baseline_phase4/svm.joblib",
+      "sha256": "6fedb971d8d4dcb9d60073ddd07c65add4a302d23c5c5cd13f0e15ce7f727383"
+    }
+  ]
+}

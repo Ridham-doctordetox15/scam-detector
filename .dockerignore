@@ -1,0 +1,13 @@
+# Keep the build context to what the Dockerfile copies. Secrets and data never enter it.
+*
+!Dockerfile
+!requirements-api.txt
+!src/
+!api/
+!data/knowledge_base/scam_patterns.json
+
+# Even inside allowed folders:
+**/__pycache__
+**/*.pyc
+**/.env
+**/.env.*

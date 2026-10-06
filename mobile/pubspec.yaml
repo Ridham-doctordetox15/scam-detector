@@ -1,0 +1,47 @@
+name: scamchecker
+description: "Checks SMS, WhatsApp and email messages for scam and phishing signs."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.4
+
+# Versions are pinned exactly (project rule). pubspec.lock is committed as well.
+# Licences checked on pub.dev: http BSD-3-Clause; image_picker Apache-2.0 + BSD-3-Clause
+# (publisher flutter.dev); flutter_localizations and flutter_lints BSD-3-Clause.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  http: 1.6.0
+  image_picker: 1.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/OFL-NotoSans.txt
+    - assets/fonts/OFL-NotoSansDevanagari.txt
+
+  # Bundled, never downloaded at runtime (SIL Open Font License 1.1, same fonts as the web app).
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular.ttf
+        - asset: assets/fonts/NotoSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSans-Bold.ttf
+          weight: 700
+    - family: NotoSansDevanagari
+      fonts:
+        - asset: assets/fonts/NotoSansDevanagari-Regular.ttf
+        - asset: assets/fonts/NotoSansDevanagari-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSansDevanagari-Bold.ttf
+          weight: 700

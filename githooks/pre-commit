@@ -1,0 +1,21 @@
+#!/bin/sh
+# Git pre-commit hook: blocks commits containing API keys or secret files.
+# Enable once per clone with:  git config core.hooksPath githooks
+# Runs the standard-library-only scanner next to this file.
+root="$(git rev-parse --show-toplevel)"
+scanner="$root/githooks/check_secrets.py"
+
+# Try python3, then python (the Windows Store "python" stub fails the -c probe and is skipped).
+for py in python3 python; do
+  if command -v "$py" >/dev/null 2>&1 && "$py" -c "import sys" >/dev/null 2>&1; then
+    exec "$py" "$scanner"
+  fi
+done
+# Windows py launcher.
+if command -v py >/dev/null 2>&1; then
+  exec py -3 "$scanner"
+fi
+
+echo "pre-commit: Python was not found, so the secret scan could not run. Commit blocked." >&2
+echo "Install Python 3 or add it to PATH (see README, Git hooks)." >&2
+exit 1

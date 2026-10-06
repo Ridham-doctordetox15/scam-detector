@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Same as the web app's meta.title (web/src/i18n/hi.ts). -->
+    <string name="app_name">स्कैम मैसेज जाँच</string>
+</resources>

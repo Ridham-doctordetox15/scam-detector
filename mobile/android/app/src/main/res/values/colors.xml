@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The web app's primary colour (the "primary" token in web/src/app/globals.css). -->
+    <color name="ic_launcher_background">#3B54D6</color>
+    <!-- Window colour before and behind the first Flutter frame = the app's background
+         (lib/theme/app_theme.dart), so there is no flash on startup. -->
+    <color name="splash_background">#FAFAFA</color>
+</resources>

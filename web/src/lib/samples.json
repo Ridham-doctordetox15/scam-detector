@@ -1,0 +1,39 @@
+{
+  "text": [
+    {
+      "id": "en_kyc_link", "expected": "scam", "titleKey": "enKycLink",
+      "text": "Dear customer, your KYC is not updated. Your account will be BLOCKED within 24 hours. Update immediately: http://sbi-kyc-verify.tk/update"
+    },
+    {
+      "id": "en_otp_call", "expected": "scam", "titleKey": "enOtpCall",
+      "text": "This is regarding a suspicious transaction attempt on your card. To block it immediately, please read out the verification code that was just sent to your phone."
+    },
+    {
+      "id": "hinglish_bijli_link", "expected": "scam", "titleKey": "hinglishBijliLink",
+      "text": "Aapka bijli connection aaj raat 9 baje kat jayega kyunki pichla bill update nahi hua. Turant is link par payment karein: http://bijli-bill-update.top/pay"
+    },
+    {
+      "id": "hinglish_lottery", "expected": "scam", "titleKey": "hinglishLottery",
+      "text": "Aapka number lucky draw mein select hua hai, 10 lakh rupaye jeetne ke liye turant apna bank details bhejein is number par."
+    },
+    {
+      "id": "en_lunch", "expected": "safe", "titleKey": "enLunch",
+      "text": "Hi, are we still on for lunch tomorrow at 1pm?"
+    },
+    {
+      "id": "hinglish_vi_offer", "expected": "safe", "titleKey": "hinglishViOffer",
+      "text": "Vi ke naye recharge plan par paiye extra data aur cashback, abhi click karein: https://www.myvi.in/offers"
+    },
+    {
+      "id": "hindi_kyc_link", "expected": "scam", "titleKey": "hindiKycLink",
+      "text": "प्रिय ग्राहक, आपका बैंक खाता आज बंद हो जाएगा। तुरंत KYC अपडेट करें: http://kyc-seva-update.top/login"
+    }
+  ],
+  "image": [
+    { "id": "shot_sms_kyc", "expected": "scam", "titleKey": "shotSmsKyc", "file": "/samples/sms_kyc_scam_en.png" },
+    { "id": "shot_whatsapp_lottery", "expected": "scam", "titleKey": "shotWhatsappLottery", "file": "/samples/whatsapp_lottery_scam_hinglish.png" },
+    { "id": "shot_sms_lunch", "expected": "safe", "titleKey": "shotSmsLunch", "file": "/samples/sms_lunch_safe_en.png" },
+    { "id": "shot_dark_parcel", "expected": "scam", "titleKey": "shotDarkParcel", "file": "/samples/whatsapp_dark_parcel_scam_en.png" },
+    { "id": "shot_hindi_kyc", "expected": "scam", "titleKey": "shotHindiKyc", "file": "/samples/sms_kyc_scam_hi.png" }
+  ]
+}
